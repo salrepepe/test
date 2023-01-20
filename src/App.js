@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Scan</h2>
+      <p>Remember to use https://</p>
+
+      <label for="frmNameCC">Navn</label>
+      <input
+        type="text"
+        name="ccname"
+        id="frmNameCC"
+        required
+        placeholder="Full Name"
+        autocomplete="cc-name"
+      />
+
+      <label for="frmCCNum">Card Number</label>
+      <input
+        name="cardnumber"
+        id="frmCCNum"
+        required
+        autocomplete="cc-number"
+      />
+
+      <label for="frmCCCVC">CVC</label>
+      <input name="cvc" id="frmCCCVC" required autocomplete="cc-csc" />
+
+      <label for="frmCCExp">Expiry</label>
+      <input
+        name="cc-exp"
+        id="frmCCExp"
+        required
+        placeholder="MM-YYYY"
+        autocomplete="cc-exp"
+      />
     </div>
   );
 }
